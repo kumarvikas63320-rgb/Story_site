@@ -5,6 +5,9 @@ import { redirect } from 'next/navigation';
 import { sb } from '@/lib/supabase';
 import Tools from '@/components/Tools';
 
+// Every page reads the visitor's session cookies, so render per request.
+export const dynamic = 'force-dynamic';
+
 const lit = Literata({ subsets: ['latin'], variable: '--serif' });
 
 const dev = Noto_Serif_Devanagari({
